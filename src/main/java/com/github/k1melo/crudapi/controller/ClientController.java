@@ -49,4 +49,11 @@ public class ClientController {
 
         return ResponseEntity.ok("Client " + updateClient.getName() + " updated");
     }
+
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<String> deleteClients(@PathVariable Long id) {
+        Client client = clientRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST));
+        clientRepository.delete(client);
+        return ResponseEntity.ok("Client " + client.getName() + " was deleted");
+    }
 }
