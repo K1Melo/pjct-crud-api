@@ -15,15 +15,16 @@ public class Product {
     private String name;
 
     @Min(0)
-    private Long price;
+    private Double price;
 
     @NotEmpty
     private String description;
 
+
     public Product() {
     }
 
-    public Product(String name, Long price, String description) {
+    public Product(String name, Double price, String description) {
         this.name = name;
         this.price = price;
         this.description = description;
@@ -45,11 +46,11 @@ public class Product {
         this.name = name;
     }
 
-    public Long getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
@@ -59,5 +60,9 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getAll() {
+        return "Id: " + id + "\n" + "Name: " + name + "\n" + "Price: " + price + "\n" + "Description: " + description;
     }
 }
