@@ -16,6 +16,9 @@ public class Client {
     private Long id;
 
     @NotEmpty
+    private String username;
+
+    @NotEmpty
     private String name;
     @NotEmpty
     private String lastName;
@@ -30,7 +33,8 @@ public class Client {
     public Client() {
     }
 
-    public Client(String name, String lastName, int age, String email) {
+    public Client(String username, String name, String lastName, int age, String email) {
+        this.username = username;
         this.name = name;
         this.lastName = lastName;
         this.age = age;
@@ -43,6 +47,14 @@ public class Client {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getName() {
@@ -75,6 +87,10 @@ public class Client {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getAll() {
+        return "Id: " + id + "\n" + "Username: " + username + "\n" + "Name: " + name + "\n" + "Last name: " + lastName + "\n" + "Age: " + age + "\n" + "Email: " + email;
     }
 }
 
