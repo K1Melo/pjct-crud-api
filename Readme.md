@@ -1,10 +1,10 @@
-# Crud API Rest
+# Welcome to my `CRUD API`
 Java | Spring | Spring Boot | Docker | PostgreSQL 
 
 ## Requirements
 
-- [JDK 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
-- [Docker](https://www.docker.com/products/docker-desktop/)
+- <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html" target="_blank">JDK 17</a>
+- <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker</a>
 
 ## Runnning aplication local:
 
